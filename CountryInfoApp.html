@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+        crossorigin=""/>
+
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+        crossorigin=""></script>
+        
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+        <style>
+            *{
+                font-family: 'Roboto', sans-serif;
+            }
+
+            .main-container{
+                margin: auto;
+                width: 50%;
+                text-align: center;
+
+            }
+            .map{
+                /* margin: auto; */
+                height: 400px;
+                width: 100%;
+                background-color: aquamarine;
+    
+            }
+
+            .nation-name{
+                font-size: 50px;
+            }
+            .horizontal-container{
+                display: block;
+               border-radius: 5px;
+                border-width: 5px;
+                border-style: solid;
+                color: #000;
+            }
+            .facts-container{
+                display: flex;
+                justify-content: space-around;
+              }
+            .fact-box{
+                width: 40%;
+                
+            }
+            .n-name{
+                display: flex;
+                border-width: 3px;
+                border-style: solid;
+                color: #000;
+                
+            }
+            .n-capital{
+                display: flex;
+                border-width: 3px;
+                border-style: solid;
+                color: #000;
+            }
+            .n-languages{
+                display: flex;
+                border-width: 3px;
+                border-style: solid;
+                color: #000;
+            }
+            .n-currency{
+                display: flex;
+                border-width: 3px;
+                border-style: solid;
+                color: #000;
+            }
+            .n-population{
+                display: flex;
+                border-width: 3px;
+                border-style: solid;
+                color: #000;
+            }
+            .n-area{
+                display: flex;
+                border-width: 3px;
+                border-style: solid;
+                color: #000;
+            }
+            .n-car{
+                display: flex;
+                border-width: 3px;
+                border-style: solid;
+                color: #000;
+            }
+            
+
+        </style>
+
+    </head>
+
+    <body>
+        <div class ="main-container">
+            <div class="Title">
+                <h1>COUNTRY INFO</h1>
+            </div>
+            <div class ="horizontal-container" id="hor-con">
+                <div class="map" id ="map"></div>
+                <div class="facts-container" id="facts-container">
+
+                    <div class="flag-container">
+                        <div align="left">
+                            
+                        </div>
+                        <div class ="flag" id="nation-flag">
+                            <div class="info" id="info">CLICK A COUNTRY TO FIND OUT MORE ABOUT IT!</div>
+                            <img hidden id="flag-src" style="padding:1px;border:thin solid black;">
+                        </div>
+                    </div>
+
+
+                    <div class = "fact-box">
+                        <div align="right">
+
+                        </div>
+
+                        <div class = "n-name">NAME: 
+                            <div class ="nation" id="nation-name" style="padding-left: 15px;"> 
+                            </div>
+                        </div>
+                        
+                        <div class = "n-capital">CAPITAL:
+                            <div class="capital" id="nation-capital" style="padding-left: 15px;">
+                            </div>
+                        </div>
+
+                        <div class = "n-languages">LANGUAGES:
+                            <div class="language" id="nation-lan" style="padding-left: 15px;">
+                            </div>
+                        </div>
+    
+                        <div class = "n-currency">CURRENCY:
+                            <div class="currency" id="nation-cur" style="padding-left: 15px;">
+                            </div>
+                        </div>
+
+                        <div class = "n-population">POPULATION:
+                            <div class="population" id="nation-pop" style="padding-left: 15px;">
+                            </div>
+                        </div>
+
+                        <div class="n-area">AREA(KM):
+                            <div class="area" id="nation-area" style="padding-left: 15px;">
+                            </div>
+                        </div>
+
+                        <div class = "n-car">DRIVING SIDE:
+                            <div class="car" id="nation-car" style="padding-left: 15px;">
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script src="CountryInfoScript.js">
+
+        </script>
+    </body>
+</html>
